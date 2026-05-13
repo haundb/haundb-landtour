@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tân Cương 2026 | Roadtrip Cinematic 12N11Đ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sand-beige: #D9C3A5;
+            --desert-brown: #8B5E3C;
+            --charcoal-black: #1E1E1E;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--charcoal-black); color: #F8F9FA; }
+        .font-serif-cinzel { font-family: 'Cinzel', serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(30,30,30,0.3) 0%, rgba(30,30,30,0.9) 100%);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .animate-zoom { animation: slowZoom 20s infinite alternate ease-in-out; }
+        
+        .text-glow { text-shadow: 0 0 15px rgba(217, 195, 165, 0.5); }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #1e1e1e; }
+        ::-webkit-scrollbar-thumb { background: var(--sand-beige); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- SECTION 01: NAVIGATION -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 px-6 md:px-12 py-6 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-serif-cinzel tracking-[0.3em] text-[#D9C3A5]">XINJIANG</div>
+        <div class="hidden md:flex space-x-10 uppercase text-[10px] tracking-[0.2em] font-semibold">
+            <a href="#journey" class="hover:text-[#D9C3A5] transition-colors">Lịch trình</a>
+            <a href="#highlights" class="hover:text-[#D9C3A5] transition-colors">Điểm đến</a>
+            <a href="#experience" class="hover:text-[#D9C3A5] transition-colors">Trải nghiệm</a>
+        </div>
+        <button class="bg-[#D9C3A5] text-black px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-[#E76F51] transition-all transform hover:scale-105">
+            Đặt chỗ ngay
+        </button>
+    </nav>
+
+    <!-- SECTION 02: HERO SECTION -->
+    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/40 z-10 hero-gradient"></div>
+            <!-- Thay ảnh bằng link thực tế của bạn -->
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070" 
+                 class="w-full h-full object-cover animate-zoom" alt="Xinjiang Landscape">
+        </div>
+        
+        <div class="relative z-20 text-center px-4 max-w-5xl">
+            <span class="block font-serif-cinzel text-[#D9C3A5] tracking-[0.8em] text-sm md:text-base mb-6 opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_forwards]">
+                SUMMER XINJIANG 2026
+            </span>
+            <h1 class="text-5xl md:text-9xl font-serif-cinzel leading-tight mb-8 text-glow">
+                TÂN CƯƠNG <br>
+                <span class="font-playfair italic text-3xl md:text-6xl tracking-normal normal-case opacity-90">Hành trình huyền thoại</span>
+            </h1>
+            <p class="text-sm md:text-lg font-light tracking-widest max-w-2xl mx-auto mb-10 text-gray-300 leading-relaxed uppercase">
+                12 Ngày 11 Đêm • Xuyên Bắc Nam Con Đường Tơ Lụa • Private Roadtrip
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#journey" class="group flex items-center space-x-3 border-b border-[#D9C3A5] pb-2 text-xs uppercase tracking-widest hover:text-[#D9C3A5] transition-all">
+                    <span>Khám phá lịch trình</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center opacity-50">
+            <div class="w-[1px] h-12 bg-gradient-to-b from-transparent to-white mb-2"></div>
+            <span class="text-[8px] uppercase tracking-[0.4em]">Scroll</span>
+        </div>
+    </section>
+
+    <!-- SECTION 03: WHY THIS TOUR -->
+    <section class="py-24 px-6 md:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="glass-card p-8 group hover:bg-[#D9C3A5] transition-all duration-500">
+                <span class="text-[#D9C3A5] group-hover:text-black block mb-4 font-serif-cinzel text-xl">01.</span>
+                <h3 class="text-lg font-bold mb-3 uppercase tracking-tighter group-hover:text-black">Duku Highway</h3>
+                <p class="text-xs text-gray-400 group-hover:text-black/80 leading-loose">Một ngày trải nghiệm đủ 4 mùa, xuyên qua những đỉnh Thiên Sơn hùng vĩ.</p>
+            </div>
+            <div class="glass-card p-8 group hover:bg-[#D9C3A5] transition-all duration-500">
+                <span class="text-[#D9C3A5] group-hover:text-black block mb-4 font-serif-cinzel text-xl">02.</span>
+                <h3 class="text-lg font-bold mb-3 uppercase tracking-tighter group-hover:text-black">Nalati & Pamir</h3>
+                <p class="text-xs text-gray-400 group-hover:text-black/80 leading-loose">Đồng cỏ xanh vô tận chạm tới bầu trời và hồ băng Karakul xanh ngắt.</p>
+            </div>
+            <div class="glass-card p-8 group hover:bg-[#D9C3A5] transition-all duration-500">
+                <span class="text-[#D9C3A5] group-hover:text-black block mb-4 font-serif-cinzel text-xl">03.</span>
+                <h3 class="text-lg font-bold mb-3 uppercase tracking-tighter group-hover:text-black">Private Expedition</h3>
+                <p class="text-xs text-gray-400 group-hover:text-black/80 leading-loose">Nhóm nhỏ tối đa 6 khách. Không vội vã, chỉ có sự tự do và cảm xúc.</p>
+            </div>
+            <div class="glass-card p-8 group hover:bg-[#D9C3A5] transition-all duration-500">
+                <span class="text-[#D9C3A5] group-hover:text-black block mb-4 font-serif-cinzel text-xl">04.</span>
+                <h3 class="text-lg font-bold mb-3 uppercase tracking-tighter group-hover:text-black">Silk Road Soul</h3>
+                <p class="text-xs text-gray-400 group-hover:text-black/80 leading-loose">Chạm vào linh hồn văn hóa nghìn năm tại phố cổ Kashgar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: FINAL CTA -->
+    <section class="relative py-40 px-6 text-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Footer bg">
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <h2 class="font-serif-cinzel text-3xl md:text-5xl mb-8 leading-snug">Tân Cương không dành cho những hành trình vội vã.</h2>
+            <p class="text-gray-400 mb-12 font-light tracking-wide">Mùa đẹp nhất (Tháng 6 - Tháng 7) chỉ dành cho những người sẵn sàng lên đường. Bạn đã sẵn sàng chưa?</p>
+            <button class="bg-[#E76F51] px-12 py-5 text-sm font-bold uppercase tracking-[0.3em] hover:scale-110 transition-transform">
+                Nhận lịch trình chi tiết
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16 px-6 md:px-20 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+            <div>
+                <p class="text-[#D9C3A5] font-serif-cinzel tracking-widest text-lg mb-4">LIÊN HỆ ĐẶT TOUR</p>
+                <div class="space-y-2 text-sm font-light text-gray-500">
+                    <p>Chuyên gia tư vấn: <span class="text-white">Nguyễn Đặng Bảo Hậu</span></p>
+                    <p>Điện thoại: <span class="text-white">0985 222 195</span></p>
+                    <p>Email: <span class="text-white">haundb@viettel.com.vn</span></p>
+                </div>
+            </div>
+            <div class="text-left md:text-right uppercase text-[9px] tracking-[0.4em] text-gray-700">
+                <p>Designed for Luxury Travel Experience</p>
+                <p class="mt-2">Xinjiang Expedition 2026 © All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hiệu ứng Navbar đổi màu khi scroll
+        window.onscroll = function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-black/80', 'backdrop-blur-lg', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-black/80', 'backdrop-blur-lg', 'py-4');
+                nav.classList.add('py-6');
+            }
+        };
+    </script>
+</body>
+</html>
