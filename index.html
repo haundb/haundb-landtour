@@ -135,7 +135,7 @@
     <section class="relative py-40 px-6 text-center overflow-hidden">
         <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070" class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Footer bg">
         <div class="relative z-10 max-w-3xl mx-auto">
-            <h2 class="font-serif-cinzel text-3xl md:text-5xl mb-8 leading-snug">Tân Cương không dành cho những hành trình vội vã.</h2>
+            <h2 class="font-serif-cinzel text-3xl md:text-5xl mb-8 leading-snug">Một hành trình đủ dài để thấy Thế giới rộng lớn hơn!</h2>
             <p class="text-gray-400 mb-12 font-light tracking-wide">Mùa đẹp nhất (Tháng 6 - Tháng 7) chỉ dành cho những người sẵn sàng lên đường. Bạn đã sẵn sàng chưa?</p>
             <button class="bg-[#E76F51] px-12 py-5 text-sm font-bold uppercase tracking-[0.3em] hover:scale-110 transition-transform">
                 Nhận lịch trình chi tiết
@@ -174,5 +174,58 @@
             }
         };
     </script>
+	<script>
+
+    // Deadline đóng đăng ký
+    const endDate = new Date("2026-06-01T23:59:59").getTime();
+
+    const countdown = setInterval(() => {
+
+        const now = new Date().getTime();
+
+        const distance = endDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24))
+            / (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60))
+            / (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60))
+            / 1000
+        );
+
+        document.getElementById("days").innerText =
+            String(days).padStart(2, '0');
+
+        document.getElementById("hours").innerText =
+            String(hours).padStart(2, '0');
+
+        document.getElementById("minutes").innerText =
+            String(minutes).padStart(2, '0');
+
+        document.getElementById("seconds").innerText =
+            String(seconds).padStart(2, '0');
+
+        if (distance < 0) {
+
+            clearInterval(countdown);
+
+            document.getElementById("countdown").innerHTML = `
+                <div class="text-[#D9C3A5] uppercase tracking-[0.3em] text-sm">
+                    REGISTRATION CLOSED
+                </div>
+            `;
+        }
+
+    }, 1000);
+</script>
 </body>
 </html>
