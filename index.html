@@ -51,7 +51,43 @@
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #1e1e1e; }
         ::-webkit-scrollbar-thumb { background: var(--sand-beige); }
-    </style>
+		   .countdown-box {
+			min-width: 90px;
+			padding: 24px 18px;
+
+			background: rgba(255,255,255,0.03);
+			border: 1px solid rgba(255,255,255,0.08);
+
+			backdrop-filter: blur(12px);
+		}
+
+		.countdown-number {
+			font-family: 'Marcellus', serif;
+			font-size: clamp(2rem, 4vw, 4rem);
+			line-height: 1;
+			color: #D9C3A5;
+
+			text-shadow: 0 0 25px rgba(217,195,165,0.25);
+		}
+
+		.countdown-label {
+			margin-top: 12px;
+
+			font-size: 9px;
+			letter-spacing: 0.35em;
+
+			color: rgba(255,255,255,0.45);
+		}
+
+		@media (max-width: 768px) {
+
+			.countdown-box {
+				min-width: 70px;
+				padding: 18px 12px;
+			}
+
+		}
+   </style>
 </head>
 <body class="overflow-x-hidden">
 
@@ -88,6 +124,37 @@
             <p class="text-sm md:text-lg font-light tracking-[0.15em] max-w-2xl mx-auto mb-10 text-gray-300 leading-relaxed">
                 12 Ngày 11 Đêm • Xuyên Bắc Nam Con Đường Tơ Lụa • Private Roadtrip
             </p>
+			<div class="mt-12">
+
+			<div class="mb-5 uppercase tracking-[0.35em] text-[10px] text-[#D9C3A5]/70">
+				ĐÓNG ĐĂNG KÝ SAU
+			</div>
+
+			<div id="countdown" class="flex justify-center gap-5 md:gap-8 text-center">
+				
+				<div class="countdown-box">
+					<div class="countdown-number" id="days">05</div>
+					<div class="countdown-label">NGÀY</div>
+				</div>
+
+				<div class="countdown-box">
+					<div class="countdown-number" id="hours">00</div>
+					<div class="countdown-label">GIỜ</div>
+				</div>
+
+				<div class="countdown-box">
+					<div class="countdown-number" id="minutes">00</div>
+					<div class="countdown-label">PHÚT</div>
+				</div>
+
+				<div class="countdown-box">
+					<div class="countdown-number" id="seconds">00</div>
+					<div class="countdown-label">GIÂY</div>
+				</div>
+
+			</div>
+
+			</div>
             <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
                 <a href="#journey" class="group flex items-center space-x-3 border-b border-[#D9C3A5] pb-2 text-xs uppercase tracking-widest hover:text-[#D9C3A5] transition-all">
                     <span>Khám phá lịch trình</span>
