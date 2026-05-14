@@ -99,9 +99,11 @@
             <a href="#highlights" class="hover:text-[#D9C3A5] transition-colors">Điểm đến</a>
             <a href="#experience" class="hover:text-[#D9C3A5] transition-colors">Trải nghiệm</a>
         </div>
-        <button class="bg-[#D9C3A5] text-black px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-[#E76F51] transition-all transform hover:scale-105">
-            Đặt chỗ ngay
-        </button>
+        <button
+			onclick="openModal()"
+			class="bg-[#D9C3A5] text-black px-6 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-[#E76F51] transition-all transform hover:scale-105">
+			Đặt chỗ ngay
+</button>
     </nav>
 
     <!-- SECTION 02: HERO SECTION -->
@@ -356,16 +358,29 @@
 </div>
 <script>
     function openModal() {
-        const modal = document.getElementById('bookingModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-    }
+    const modal = document.getElementById('bookingModal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+	}
 
     function closeModal() {
-        const modal = document.getElementById('bookingModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-    }
+    const modal = document.getElementById('bookingModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+	}
+	    // Đóng popup khi click nền tối
+    const bookingModal =
+        document.getElementById('bookingModal');
+
+    bookingModal.addEventListener('click', function(e) {
+
+        if (e.target === bookingModal) {
+            closeModal();
+        }
+
+    });
 </script>
 
 </body>
