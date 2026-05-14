@@ -117,14 +117,14 @@
             <span class="block font-serif-cinzel text-[#D9C3A5] tracking-[0.8em] text-sm md:text-base mb-6 opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_forwards]">
                 SUMMER XINJIANG 2026
             </span>
-            <h1 class="text-5xl md:text-9xl font-serif-cinzel leading-tight mb-8 text-glow">
+            <h1 class="text-4xl md:text-8xl font-serif-cinzel leading-tight mb-8 text-glow">
                 TÂN CƯƠNG <br>
                 <span class="font-playfair italic text-3xl md:text-6xl tracking-normal normal-case opacity-90">Hành trình huyền thoại</span>
             </h1>
             <p class="text-sm md:text-lg font-light tracking-[0.15em] max-w-2xl mx-auto mb-10 text-gray-300 leading-relaxed">
                 12 Ngày 11 Đêm • Xuyên Bắc Nam Con Đường Tơ Lụa • Private Roadtrip
             </p>
-			<div class="mt-12">
+			<div class="mt-8">
 
 			<div class="mb-5 uppercase tracking-[0.35em] text-[10px] text-[#D9C3A5]/70">
 				ĐÓNG ĐĂNG KÝ SAU
@@ -204,9 +204,11 @@
         <div class="relative z-10 max-w-3xl mx-auto">
             <h2 class="font-serif-cinzel text-3xl md:text-5xl mb-8 leading-snug">Một hành trình đủ dài để thấy Thế giới rộng lớn hơn!</h2>
             <p class="text-gray-400 mb-12 font-light tracking-wide">Mùa đẹp nhất (Tháng 6 - Tháng 7) chỉ dành cho những người sẵn sàng lên đường. Bạn đã sẵn sàng chưa?</p>
-            <button class="bg-[#E76F51] px-12 py-5 text-sm font-bold uppercase tracking-[0.3em] hover:scale-110 transition-transform">
-                Nhận lịch trình chi tiết
-            </button>
+            <button
+				onclick="openModal()"
+				class="bg-[#E76F51] px-12 py-5 text-sm font-bold uppercase tracking-[0.3em] hover:scale-110 transition-transform">
+				Nhận lịch trình chi tiết
+			</button>
         </div>
     </section>
 
@@ -244,7 +246,7 @@
 	<script>
 
     // Deadline đóng đăng ký
-    const endDate = new Date("2026-06-01T23:59:59").getTime();
+    const endDate = new Date(2026, 5, 1, 23, 59, 59).getTime();
 
     const countdown = setInterval(() => {
 
@@ -294,5 +296,77 @@
 
     }, 1000);
 </script>
+<!-- BOOKING MODAL -->
+
+<div
+    id="bookingModal"
+    class="fixed inset-0 bg-black/70 backdrop-blur-md z-[999] hidden items-center justify-center px-6">
+
+    <div class="w-full max-w-xl bg-[#111]/95 border border-white/10 p-10 relative">
+
+        <!-- CLOSE -->
+        <button
+            onclick="closeModal()"
+            class="absolute top-5 right-5 text-white/50 hover:text-white text-2xl">
+            ×
+        </button>
+
+        <h2 class="font-serif-cinzel text-3xl text-[#D9C3A5] mb-3">
+            Đăng ký nhận thông tin
+        </h2>
+
+        <p class="text-sm text-gray-400 mb-8 leading-relaxed">
+            Để lại thông tin để nhận lịch trình chi tiết và tư vấn riêng cho hành trình Tân Cương 2026.
+        </p>
+
+        <form class="space-y-5">
+
+            <input
+                type="text"
+                placeholder="Họ và tên"
+                class="w-full bg-white/5 border border-white/10 px-5 py-4 outline-none text-white placeholder:text-gray-500">
+
+            <input
+                type="tel"
+                placeholder="Số điện thoại"
+                class="w-full bg-white/5 border border-white/10 px-5 py-4 outline-none text-white placeholder:text-gray-500">
+
+            <input
+                type="email"
+                placeholder="Email"
+                class="w-full bg-white/5 border border-white/10 px-5 py-4 outline-none text-white placeholder:text-gray-500">
+
+            <textarea
+                rows="4"
+                placeholder="Bạn muốn tư vấn thêm điều gì?"
+                class="w-full bg-white/5 border border-white/10 px-5 py-4 outline-none text-white placeholder:text-gray-500"></textarea>
+
+            <button
+                type="submit"
+                class="w-full bg-[#D9C3A5] text-black py-4 uppercase tracking-[0.3em] text-sm font-bold hover:bg-white transition-all">
+
+                Gửi thông tin
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+<script>
+    function openModal() {
+        const modal = document.getElementById('bookingModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('bookingModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+</script>
+
 </body>
 </html>
